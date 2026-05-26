@@ -112,7 +112,7 @@ export default function TechStack() {
           >
             <div
               className="absolute inset-0 opacity-25"
-              style={{ background: `radial-gradient(circle at 30% 0%, ${group.accent}40, transparent 58%)` }}
+              style={{ background: `radial-gradient(circle at 30% 0%, ${group.accent}22, transparent 56%)` }}
             />
             <div className="relative mb-5 flex items-center gap-3">
               <div

@@ -56,9 +56,7 @@ export default function ExternalApi() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="glass relative overflow-hidden rounded-3xl p-6 md:p-8"
         >
-          <div
-            className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#00d4ff] opacity-15 blur-3xl"
-          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_90%_0%,rgba(0,212,255,0.10),transparent_36%)]" />
           <div className="relative">
             <div className="mb-4 flex items-center gap-2 font-mono text-[10px] uppercase tracking-wider text-[#00d4ff]">
               <MapPin className="h-3.5 w-3.5" />

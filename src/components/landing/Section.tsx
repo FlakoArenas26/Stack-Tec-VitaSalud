@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function Section({ id, children, className = "" }: { id?: string; children: React.ReactNode; className?: string }) {
   return (
-    <section id={id} className={`relative mx-auto max-w-7xl px-6 py-28 ${className}`}>
+    <section id={id} className={`relative mx-auto scroll-mt-28 max-w-7xl px-6 py-28 ${className}`}>
       {children}
     </section>
   );

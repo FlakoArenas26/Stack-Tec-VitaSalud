@@ -58,7 +58,7 @@ export default function Roles() {
           >
             <div
               className="absolute inset-0 opacity-30"
-              style={{ background: `radial-gradient(circle at 50% 0%, ${r.accent}40, transparent 60%)` }}
+              style={{ background: `radial-gradient(circle at 50% 0%, ${r.accent}20, transparent 60%)` }}
             />
             <div
               className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"

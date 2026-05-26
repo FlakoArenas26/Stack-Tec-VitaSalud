@@ -30,14 +30,8 @@ function MagneticButton({ children, primary, href }: { children: React.ReactNode
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden pt-24">
-      {/* gradient blobs */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-32 -left-32 h-[520px] w-[520px] rounded-full bg-[#00d4ff] opacity-25 blur-[120px] animate-blob" />
-        <div className="absolute top-1/3 -right-32 h-[600px] w-[600px] rounded-full bg-[#7c3aed] opacity-25 blur-[140px] animate-blob" style={{ animationDelay: "4s" }} />
-        <div className="absolute bottom-0 left-1/3 h-[500px] w-[500px] rounded-full bg-[#00f5c4] opacity-20 blur-[120px] animate-blob" style={{ animationDelay: "8s" }} />
-      </div>
-      <div className="absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
+    <section className="relative min-h-screen overflow-hidden pt-28">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(0,245,196,0.08),transparent_36%)]" />
 
       <div className="relative mx-auto max-w-7xl px-6 py-20">
         <div className="flex flex-col items-center text-center">

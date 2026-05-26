@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 const LINKS = [
   ["Stack", "stack"],
   ["Herramientas", "tools"],
@@ -12,17 +10,11 @@ const LINKS = [
 ] as const;
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", fn);
-    return () => window.removeEventListener("scroll", fn);
-  }, []);
-
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "py-3" : "py-5"}`}>
+    <header className="fixed inset-x-0 top-0 z-50 py-3">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#0a0f1e]/95 via-[#0a0f1e]/75 to-transparent backdrop-blur-xl" />
       <div className="mx-auto max-w-7xl px-6">
-        <div className={`flex items-center justify-between rounded-full px-5 py-2.5 transition-all ${scrolled ? "glass liquid-glass" : ""}`}>
+        <div className="glass liquid-glass relative flex items-center justify-between rounded-full px-5 py-2.5">
           <a href="#" className="flex items-center gap-2">
             <img
               src="/favicon.svg"

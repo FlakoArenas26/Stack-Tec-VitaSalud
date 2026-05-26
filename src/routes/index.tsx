@@ -10,6 +10,7 @@ import ExternalApi from "@/components/landing/ExternalApi";
 import ApiDocs from "@/components/landing/ApiDocs";
 import Team from "@/components/landing/Team";
 import Footer from "@/components/landing/Footer";
+import Starfield from "@/components/landing/Starfield";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -32,7 +33,8 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="relative min-h-screen bg-[#0a0f1e] text-slate-100 antialiased">
+    <main className="relative min-h-screen bg-[#02030a] text-slate-100 antialiased">
+      <Starfield />
       <Nav />
       <Hero />
       <TechStack />
