@@ -16,6 +16,9 @@ import v1Messages from "@/assets/valeria/08-mensajes.png";
 import v1Summary from "@/assets/valeria/09-resumen.png";
 import v1Recommendations from "@/assets/valeria/10-recomendaciones.png";
 import vitaPdf from "@/assets/VitaSalud.pdf";
+import adminPdf from "@/assets/VitaSalud-panel-admin.pdf";
+import medicoPdf from "@/assets/VitaSalud-panel-medico.pdf";
+import pacientePdf from "@/assets/VitaSalud-panel-paciente.pdf";
 import valeriaPhoto from "@/assets/team/valeria.jpeg";
 
 const NARRATION = `Hola, soy Valeria Martínez Castañeda, diseñadora UX/UI de VitaSalud.
@@ -47,6 +50,33 @@ const TOOLS = [
   { icon: Figma, label: "Herramienta", value: "Figma" },
   { icon: Palette, label: "Sistema", value: "Tailwind CSS 4 + Radix UI" },
   { icon: Sparkles, label: "Diseño", value: "Valeria Martínez" },
+];
+
+const PDF_DOCUMENTS = [
+  {
+    src: vitaPdf,
+    eyebrow: "Home / Landing",
+    title: "Home / Landing de la clínica",
+    description: "Vista principal de entrada a VitaSalud, con presentación inicial, registro e identidad visual de la clínica.",
+  },
+  {
+    src: pacientePdf,
+    eyebrow: "Panel Paciente",
+    title: "Panel Paciente",
+    description: "Vista documentada del flujo del paciente: perfil, citas, notificaciones y seguimiento.",
+  },
+  {
+    src: medicoPdf,
+    eyebrow: "Panel Médico / Dr",
+    title: "Panel Médico / Dr",
+    description: "Evidencia visual del flujo clínico para consulta, diagnóstico y recomendaciones.",
+  },
+  {
+    src: adminPdf,
+    eyebrow: "Panel Admin",
+    title: "Panel Admin",
+    description: "Documento de referencia para gestión, supervisión y administración de la plataforma.",
+  },
 ];
 
 export default function UxEvolution() {
@@ -150,7 +180,7 @@ export default function UxEvolution() {
       </motion.div>
 
       <div className="mt-10">
-        <PdfPreview src={vitaPdf} />
+        <PdfPreview documents={PDF_DOCUMENTS} />
       </div>
     </Section>
   );
