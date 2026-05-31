@@ -22,7 +22,7 @@ El proyecto transforma una infografia tradicional en una presentacion tecnica in
 - Animaciones con Framer Motion.
 - Efecto maquina de escribir en las secciones de Miguel Angel y Valeria.
 - Carruseles con vista ampliable para evidencias visuales.
-- Preview embebido del PDF final de VitaSalud.
+- Preview embebido del PDF final de VitaSalud y anexos por rol: paciente, medico y administrador.
 - Favicon y branding propio de Stack Tec VitaSalud.
 - Tarjetas con efecto liquid glass.
 - Logos de tecnologias y herramientas mediante Simple Icons con fallback visual.
@@ -63,6 +63,7 @@ src/
   assets/
     valeria/              # Capturas del diseno base UX/UI
     VitaSalud.pdf         # Documento final usado como vista previa
+    VitaSalud-panel-*.pdf # Anexos PDF por rol de usuario
     db-final-reference.png
   components/
     landing/              # Secciones de la infografia interactiva
