@@ -4,7 +4,9 @@ import { Section, SectionTitle } from "./Section";
 import { Typewriter } from "./Typewriter";
 import { ErDiagram, type ErRelation, type ErTable } from "./ErDiagram";
 import { PreviewCarousel } from "./PreviewCarousel";
+import { PersonAvatar } from "./PersonAvatar";
 import dbReference from "@/assets/db-final-reference.png";
+import miguelPhoto from "@/assets/team/miguel.jpeg";
 
 const NARRATION = `Hola, soy Miguel Ángel Herrera Oyola, encargado del diseño de la base de datos de VitaSalud.
 
@@ -111,24 +113,40 @@ export default function DatabaseEvolution() {
       />
 
       <div className="glass liquid-glass mb-10 rounded-3xl p-6 md:p-8">
-        <Typewriter
-          text={NARRATION}
-          className="font-mono text-sm leading-relaxed text-slate-300 md:text-base"
-          cursorColor="#00f5c4"
-        />
-        <div className="mt-6 flex flex-wrap gap-3">
-          {META.map((m) => (
-            <div
-              key={m.label}
-              className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5"
-            >
-              <m.icon className="h-3.5 w-3.5 text-[#00f5c4]" />
-              <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
-                {m.label}
-              </span>
-              <span className="font-mono text-xs text-slate-200">{m.value}</span>
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
+          <div className="mx-auto text-center lg:mx-0">
+            <PersonAvatar
+              src={miguelPhoto}
+              alt="Miguel Ángel Herrera Oyola"
+              accent="#00f5c4"
+              size="xl"
+            />
+            <div className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-[#00f5c4]">
+              Miguel Ángel
             </div>
-          ))}
+            <div className="text-sm text-slate-400">Base de datos</div>
+          </div>
+          <div className="min-w-0 flex-1">
+            <Typewriter
+              text={NARRATION}
+              className="font-mono text-sm leading-relaxed text-slate-300 md:text-base"
+              cursorColor="#00f5c4"
+            />
+            <div className="mt-6 flex flex-wrap gap-3">
+              {META.map((m) => (
+                <div
+                  key={m.label}
+                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5"
+                >
+                  <m.icon className="h-3.5 w-3.5 text-[#00f5c4]" />
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                    {m.label}
+                  </span>
+                  <span className="font-mono text-xs text-slate-200">{m.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

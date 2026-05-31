@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 import { Code2, Database, Palette } from "lucide-react";
 import { Section, SectionTitle } from "./Section";
+import { PersonAvatar } from "./PersonAvatar";
+import rafaelPhoto from "@/assets/team/rafael.jpeg";
+import miguelPhoto from "@/assets/team/miguel.jpeg";
+import valeriaPhoto from "@/assets/team/valeria.jpeg";
 
 const TEAM = [
   {
     name: "Rafael José Arenas Restrepo",
-    initials: "RA",
+    photo: rafaelPhoto,
     c: "#00d4ff",
     role: "Full-Stack Developer",
     icon: Code2,
@@ -13,7 +17,7 @@ const TEAM = [
   },
   {
     name: "Miguel Ángel Herrera Oyola",
-    initials: "MH",
+    photo: miguelPhoto,
     c: "#00f5c4",
     role: "Database Designer",
     icon: Database,
@@ -21,7 +25,7 @@ const TEAM = [
   },
   {
     name: "Valeria Martínez Castañeda",
-    initials: "VM",
+    photo: valeriaPhoto,
     c: "#a78bfa",
     role: "UX / UI Designer",
     icon: Palette,
@@ -52,12 +56,7 @@ export default function Team() {
               style={{ background: m.c }}
             />
             <div className="relative flex items-center gap-4">
-              <div
-                className="flex h-16 w-16 items-center justify-center rounded-2xl font-display text-xl font-bold"
-                style={{ background: `${m.c}20`, color: m.c, boxShadow: `0 0 30px ${m.c}40` }}
-              >
-                {m.initials}
-              </div>
+              <PersonAvatar src={m.photo} alt={m.name} accent={m.c} size="md" />
               <div>
                 <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-wider" style={{ color: m.c }}>
                   <m.icon className="h-3 w-3" />

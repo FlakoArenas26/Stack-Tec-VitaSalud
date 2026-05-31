@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Braces, Database, Layers3, Server, ShieldCheck, Sparkles, Wrench } from "lucide-react";
 import { Section, SectionTitle } from "./Section";
 import { TechLogo, techColor, type TechLogoName } from "./TechLogo";
+import { PersonAvatar } from "./PersonAvatar";
+import rafaelPhoto from "@/assets/team/rafael.jpeg";
 
 type StackItem = {
   name: string;
@@ -99,6 +101,33 @@ export default function TechStack() {
         title="Arsenal Tecnológico"
         subtitle="Mapa visual de las tecnologías, frameworks, librerías, herramientas e IDEs que sostienen VitaSalud desde la interfaz hasta la base de datos."
       />
+
+      <motion.div
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="glass liquid-glass mb-6 flex flex-col gap-5 rounded-3xl p-5 sm:flex-row sm:items-center sm:p-6"
+      >
+        <PersonAvatar
+          src={rafaelPhoto}
+          alt="Rafael José Arenas Restrepo"
+          accent="#00d4ff"
+          size="lg"
+          className="mx-auto sm:mx-0"
+        />
+        <div className="text-center sm:text-left">
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#00d4ff]">
+            Implementación Full-Stack · Rafael
+          </div>
+          <h3 className="mt-2 font-display text-2xl font-bold text-white">
+            Stack convertido en producto funcional
+          </h3>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-400">
+            Rafael integró frontend, backend, API, seguridad, documentación y despliegue de la infografía interactiva,
+            conectando las decisiones de base de datos y diseño UX/UI con una experiencia navegable para presentar el proyecto.
+          </p>
+        </div>
+      </motion.div>
 
       <div className="grid gap-6 lg:grid-cols-2">
         {GROUPS.map((group, index) => (

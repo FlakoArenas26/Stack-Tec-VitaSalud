@@ -4,6 +4,7 @@ import { Section, SectionTitle } from "./Section";
 import { Typewriter } from "./Typewriter";
 import { PdfPreview } from "./PdfPreview";
 import { PreviewCarousel, type PreviewSlide } from "./PreviewCarousel";
+import { PersonAvatar } from "./PersonAvatar";
 import v1Register from "@/assets/valeria/01-registro.png";
 import v1Profile from "@/assets/valeria/02-perfil.png";
 import v1Notifications from "@/assets/valeria/03-notificaciones.png";
@@ -15,6 +16,7 @@ import v1Messages from "@/assets/valeria/08-mensajes.png";
 import v1Summary from "@/assets/valeria/09-resumen.png";
 import v1Recommendations from "@/assets/valeria/10-recomendaciones.png";
 import vitaPdf from "@/assets/VitaSalud.pdf";
+import valeriaPhoto from "@/assets/team/valeria.jpeg";
 
 const NARRATION = `Hola, soy Valeria Martínez Castañeda, diseñadora UX/UI de VitaSalud.
 
@@ -57,24 +59,40 @@ export default function UxEvolution() {
       />
 
       <div className="glass liquid-glass mb-10 rounded-3xl p-6 md:p-8">
-        <Typewriter
-          text={NARRATION}
-          className="font-mono text-sm leading-relaxed text-slate-300 md:text-base"
-          cursorColor="#a78bfa"
-        />
-        <div className="mt-6 flex flex-wrap gap-3">
-          {TOOLS.map((t) => (
-            <div
-              key={t.label}
-              className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5"
-            >
-              <t.icon className="h-3.5 w-3.5 text-[#a78bfa]" />
-              <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
-                {t.label}
-              </span>
-              <span className="font-mono text-xs text-slate-200">{t.value}</span>
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
+          <div className="mx-auto text-center lg:mx-0">
+            <PersonAvatar
+              src={valeriaPhoto}
+              alt="Valeria Martínez Castañeda"
+              accent="#a78bfa"
+              size="xl"
+            />
+            <div className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-[#a78bfa]">
+              Valeria Martínez
             </div>
-          ))}
+            <div className="text-sm text-slate-400">UX / UI</div>
+          </div>
+          <div className="min-w-0 flex-1">
+            <Typewriter
+              text={NARRATION}
+              className="font-mono text-sm leading-relaxed text-slate-300 md:text-base"
+              cursorColor="#a78bfa"
+            />
+            <div className="mt-6 flex flex-wrap gap-3">
+              {TOOLS.map((t) => (
+                <div
+                  key={t.label}
+                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5"
+                >
+                  <t.icon className="h-3.5 w-3.5 text-[#a78bfa]" />
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                    {t.label}
+                  </span>
+                  <span className="font-mono text-xs text-slate-200">{t.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
